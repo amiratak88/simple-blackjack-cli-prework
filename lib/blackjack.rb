@@ -41,7 +41,7 @@ def hit?(card_total)
   move = get_user_input
   if move == "h"
     card_total += deal_card
-    display_card_total
+    display_card_total(card_total)
     return card_total
   elsif move != "h" && move != "s" 
     invalid_command
