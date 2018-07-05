@@ -41,7 +41,6 @@ def hit?(card_total)
   move = get_user_input
   if move == "h"
     card_total += deal_card
-    display_card_total(card_total)
     return card_total
   elsif move != "h" && move != "s" 
     invalid_command
@@ -62,9 +61,9 @@ def runner
   # code runner here
   welcome
   card_total = initial_round
-  puts card_total
   until card_total > 21
     card_total = hit?(card_total)
+    display_card_total(card_total)
   end
   end_game(card_total)
 end
